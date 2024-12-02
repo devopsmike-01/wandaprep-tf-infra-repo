@@ -7,12 +7,12 @@ resource "aws_instance" "wandaprep-web-server" {
   }
 }
 
-resource "aws_instance" "wandaprep-app-server" {
+resource "aws_instance" "wandaprep-prod-server" {
   ami           = var.ami_id
   instance_type = var.instance_type
 
   tags = {
-    Name = "wandaprep-app-server"
+    Name = "wandaprep-prod-server"
   }
 }
 
